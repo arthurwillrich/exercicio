@@ -1,4 +1,5 @@
 package main;
+
 public class Operacao {
 	private int num1;
 	private int num2;
@@ -29,6 +30,32 @@ public class Operacao {
 	
 	double dividir(double dividendo, double divisor) {
 		return dividendo/divisor;
+	}
+	
+	void subtrair() {
+		this.resultado = this.num1 - this.num2;
+	}
+	
+	double potencia() {
+		double resultado = 1;
+		for (int i = 1; i <= this.num2; i++) {
+			resultado = resultado * this.num1; 
+		}
+		return resultado;
+	}
+	
+	double mediaPonderada(double n1, double n2, double p1, double p2) {
+		double resultado = 0;	
+		resultado = (n1 * p1 + n2*p2)/(p1 + p2);		
+		return resultado;
+	}
+	
+	void fatorial (int f1) {
+		int resultado = 1;
+		for (int i = f1; i > 0; i--) {
+			resultado = i * resultado;
+		}			
+		this.resultado = resultado; 
 	}
 	
 	public int getNum1() {
